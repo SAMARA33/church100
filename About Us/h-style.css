@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+.h2{
+  font: 20px;
+}
+section{
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background: url(6f4789224173b4bf4936cf4cbeee9a30.jpg) no-repeat;
+   background-size:cover;
+  background-position: center;
+}
+
+header{
+  position: relative;
+  top: 0;
+  width: 100%;
+  padding: 5px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (min-width:0px) and (max-width:767px){
+  header{
+    padding: 0px;
+  }
+  header h2{
+    font-size: 18px !important;
+  }
+}
+label{
+  display: none;
+}
+
+/* header .logo{
+  position: relative;
+  color: #000;
+  font-size: 5px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 1px;
+} */
+header .logo-wrp{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 20px;
+  }
+  header .logo-wrp img{
+    width: 20%;
+  }
+  header .logo-wrp h2{
+    font-size: 20px;
+  }
+
+header .navigation a{
+  color: #000;
+  font-size: 12px;
+  text-decoration: none;
+  font-weight: 500;
+  letter-spacing: 1px;
+  padding: 10px;
+  border-radius: 20px;
+  transition: 0.3s;
+  transition-property: background;
+}
+
+
+header .navigation a:hover{
+  background: #fff;
+}
+#check{
+    z-index: 3;
+    display: none;
+  }
+
+/* Responsive CSS */
+
+@media (max-width: 960px){
+  header .navigation{
+    display: none;
+  }
+
+  label{
+    display: block;
+    font-size: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+    transition-property: color;
+  }
+
+  label:hover{
+    color: #000;
+  }
+
+  label .close-btn{
+    display: none;
+  }
+
+  #check:checked ~ header .navigation{
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 25px;
+    background: rgba(114, 223, 255, 0.9);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+  }
+
+  #check:checked ~  header .navigation a{
+    font-weight: 700;
+    margin-right: 0;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+  }
+
+  #check:checked ~ header label .close-btn{
+    z-index: 2;
+    position: fixed;
+    display: block;
+  }
+
+  #check:checked ~ header label .menu-btn{
+    display: none;
+  }
+
+  label .menu-btn{
+    position: absolute;
+  }
+
+}
+@media (min-width:0px) and (max-width:767px){
+    label{
+        margin-bottom: 1rem !important;
+    }
+    header{
+        padding: 10px 30px !important;
+    }
+}
+
+
+
